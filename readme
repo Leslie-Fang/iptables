@@ -1,0 +1,34 @@
+1. 显示hello world的html
+敲命令:
+1.1 iptables -F && iptables -t nat -F
+1.2 python3 server.py
+1.3 用浏览器访问 http://localhost:8888
+
+2. 显示规则一
+2.1 iptables -F && iptables -t nat -F
+2.2 python3 server.py
+2.3 用浏览器访问 http://localhost:8888， 发现html正常传输
+2.4 python3 rule1.py
+2.5 用浏览器访问 http://localhost:8888， 发现html被block，并显示iptables的规则
+
+
+3. 显示规则二
+3.1 iptables -F && iptables -t nat -F
+3.2 python3 server.py
+3.3 用浏览器访问 http://localhost:8888， 发现html正常传输
+3.4 python3 rule2.py
+3.5 用浏览器访问 http://localhost:8888， 发现html被block
+3.6 用浏览器访问 http://localhost:5000, 可以读取出来iptables的规则
+
+
+4. 显示规则三
+4.1 iptables -F && iptables -t nat -F
+4.2 python3 server.py
+4.3 用浏览器访问 http://localhost:8888， 发现html正常传输
+4.4 python3 rule3.py
+4.5 用浏览器访问 http://localhost:8888， 发现html被block
+4.6 用浏览器访问 http://localhost:5000, 可以读取出来iptables的规则
+
+参考资料：
+http://cn.linux.vbird.org/linux_server/0250simple_firewall.php#netfilter
+https://wiki.archlinux.org/index.php/Iptables_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
